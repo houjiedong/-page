@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>心理学理论基于动态层次分析法决策系统</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>欢迎使用心理学理论基于动态层次分析法决策系统！</h1>
+<p>当前消费类型：2.奢侈性消费</p>
+      <p>
+    <img src="https://th.bing.com/th/id/OIP.er-IM1lyLst96SZkduWYFQAAAA?w=241&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="消费类型图片" class="consumer-image">
+</p>
+
+        <div class="selection-section">
+            <label for="consumer-type">请输入被试编号：</label>
+            <input type="number" id="consumer-type" min="1" max="2">
+            <button id="start-matrix-input">提交编号</button>
+        </div>       
+        <!-- 标准说明和比较输入 -->
+        <div id="criteria-section" class="hidden">
+            <h2>以下是判断标准及其定义：</h2>      
+            <p>1. 美学设计：这个商品的美学设计对你的吸引性/重要性</p>
+            <p>2. 情感共鸣：消费这个商品给你带来的愉悦感/体验感/温暖感/幸福感</p>
+            <p>3. 情感连接：你对商品背后的属性（如：明星/游戏/商品品牌）的连接强度/认可度</p>
+            <p>4. 身份象征：这个商品给你带来的身份地位</p>
+            <p>5. 社会群体：这个商品使你与某个群体连接起来（如：粉丝群体、爱好者圈子）</p>
+            <p>6. 感官体验：这个商品给你带来的感官体验（如：听觉、视觉、触觉、嗅觉）</p>
+            <p>7. 互动性/沉浸感：这个商品与你的连结强度</p>
+            <p>8. 创新性：消费这个商品对你来说的新奇性/先进性</p>
+            <h3>请输入标准两两比较(请输入1~9的整数）：</h3>    
+          <p>1 表示后一个标准比起前一个标准非常重要</p>
+           <p>3 表示后一个标准比起前一个标准较为重要</p>
+   <p>5 表示前一个标准和后一个标准一样重要</p>
+ <p>7 表示前一个标准比起后一个标准较为重要</p>
+   <p>9 表示前一个标准比起后一个标准非常重要</p>
+    <p>2, 4, 6, 8 表示上述相邻判断值的中间值</p>
+            <label for="matrix-1-2">1.美学设计 相对于 2.情感共鸣 的重要性（1~9）：</label>
+            <input type="number" id="matrix-1-2" min="1" max="9"><br>
+            <label for="matrix-1-3">1.美学设计 相对于 3.情感连接 的重要性（1~9）：</label>
+            <input type="number" id="matrix-1-3" min="1" max="9"><br>
+            <label for="matrix-1-4">1.美学设计 相对于 4.身份象征 的重要性（1~9）：</label>
+            <input type="number" id="matrix-1-4" min="1" max="9"><br>
+            <label for="matrix-1-5">1.美学设计 相对于 5.社会群体 的重要性（1~9）：</label>
+            <input type="number" id="matrix-1-5" min="1" max="9"><br>
+            <label for="matrix-1-6">1.美学设计 相对于 6.感官体验 的重要性（1~9）：</label>
+            <input type="number" id="matrix-1-6" min="1" max="9"><br>
+            <label for="matrix-1-7">1.美学设计 相对于 7.互动性/沉浸感 的重要性（1~9）：</label>
+            <input type="number" id="matrix-1-7" min="1" max="9"><br>
+            <label for="matrix-1-8">1.美学设计 相对于 8.创新性 的重要性（1~9）：</label>
+            <input type="number" id="matrix-1-8" min="1" max="9"><br>
+            <label for="matrix-2-3">2.情感共鸣 相对于 3.情感连接 的重要性（1~9）：</label>
+            <input type="number" id="matrix-2-3" min="1" max="9"><br>
+            <label for="matrix-2-4">2.情感共鸣 相对于 4.身份象征 的重要性（1~9）：</label>
+            <input type="number" id="matrix-2-4" min="1" max="9"><br>
+            <label for="matrix-2-5">2.情感共鸣 相对于 5.社会群体 的重要性（1~9）：</label>
+            <input type="number" id="matrix-2-5" min="1" max="9"><br>
+            <label for="matrix-2-6">2.情感共鸣 相对于 6.感官体验 的重要性（1~9）：</label>
+            <input type="number" id="matrix-2-6" min="1" max="9"><br>
+            <label for="matrix-2-7">2.情感共鸣 相对于 7.互动性/沉浸感 的重要性（1~9）：</label>
+            <input type="number" id="matrix-2-7" min="1" max="9"><br>
+            <label for="matrix-2-8">2.情感共鸣 相对于 8.创新性 的重要性（1~9）：</label>
+            <input type="number" id="matrix-2-8" min="1" max="9"><br>
+            <label for="matrix-3-4">3.情感连接 相对于 4.身份象征 的重要性（1~9）：</label>
+            <input type="number" id="matrix-3-4" min="1" max="9"><br>
+            <label for="matrix-3-5">3.情感连接 相对于 5.社会群体 的重要性（1~9）：</label>
+            <input type="number" id="matrix-3-5" min="1" max="9"><br>
+            <label for="matrix-3-6">3.情感连接 相对于 6.感官体验 的重要性（1~9）：</label>
+            <input type="number" id="matrix-3-6" min="1" max="9"><br>
+            <label for="matrix-3-7">3.情感连接 相对于 7.互动性/沉浸感 的重要性（1~9）：</label>
+            <input type="number" id="matrix-3-7" min="1" max="9"><br>
+            <label for="matrix-3-8">3.情感连接 相对于 8.创新性 的重要性（1~9）：</label>
+            <input type="number" id="matrix-3-8" min="1" max="9"><br>
+            <label for="matrix-4-5">4.身份象征 相对于 5.社会群体 的重要性（1~9）：</label>
+            <input type="number" id="matrix-4-5" min="1" max="9"><br>
+            <label for="matrix-4-6">4.身份象征 相对于 6.感官体验 的重要性（1~9）：</label>
+            <input type="number" id="matrix-4-6" min="1" max="9"><br>
+            <label for="matrix-4-7">4.身份象征 相对于 7.互动性/沉浸感 的重要性（1~9）：</label>
+            <input type="number" id="matrix-4-7" min="1" max="9"><br>
+            <label for="matrix-4-8">4.身份象征 相对于 8.创新性 的重要性（1~9）：</label>
+            <input type="number" id="matrix-4-8" min="1" max="9"><br>
+            <label for="matrix-5-6">5.社会群体 相对于 6.感官体验 的重要性（1~9）：</label>
+            <input type="number" id="matrix-5-6" min="1" max="9"><br>
+            <label for="matrix-5-7">5.社会群体 相对于 7.互动性/沉浸感 的重要性（1~9）：</label>
+            <input type="number" id="matrix-5-7" min="1" max="9"><br>
+            <label for="matrix-5-8">5.社会群体 相对于 8.创新性 的重要性（1~9）：</label>
+            <input type="number" id="matrix-5-8" min="1" max="9"><br>
+            <label for="matrix-6-7">6.感官体验 相对于 7.互动性/沉浸感 的重要性（1~9）：</label>
+            <input type="number" id="matrix-6-7" min="1" max="9"><br>
+            <label for="matrix-6-8">6.感官体验 相对于 8.创新性 的重要性（1~9）：</label>
+            <input type="number" id="matrix-6-8" min="1" max="9"><br>
+            <label for="matrix-7-8">7.互动性/沉浸感 相对于 8.创新性 的重要性（1~9）：</label>
+            <input type="number" id="matrix-7-8" min="1" max="9"><br>
+
+            <button id="submit-criteria">提交标准比较</button>
+        </div>
+
+       <!-- 选项输入 -->
+        <div id="options-section" class="hidden">
+            <h2>请输入您的决策选项（用空格分隔，例如：商品A 商品B 商品C）：</h2>
+            <input type="text" id="options-input" placeholder="例如：商品A 商品B 商品C">
+            <button id="submit-options">提交选项</button>
+        </div>
+
+        <!-- 评分输入 -->
+        <div id="rating-section" class="hidden">
+            <h3>请对每个选项在每个标准上的表现进行评分（1~8，8表示非常重要）：</h3>
+            <div id="rating-list"></div>
+            <button id="submit-ratings">提交评分</button>
+        </div>
+
+        <!-- 结果显示 -->
+        <div id="result-section" class="hidden">
+            <h2>最终决策结果</h2>
+            <div id="result-content"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>心理学理论基于动态层次分析法决策系统</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+</html>
